@@ -1,0 +1,23 @@
+.Calculator-Keys{
+    background-color: #999999; 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1px;
+}
+.Calculator-Display{
+    background-color: #222222;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: right;
+}
+.equal{
+    background-image: linear-gradient(to bottom, #fe886a, #ff7033);
+    grid-column: -2;
+    grid-row: 2/span 4;
+}
+.Calculator-Keys > *{
+    background-color: #ffffff;
+    text-align: center;
+    padding: 0.5em 1.25em;
+    position: relative;
+}

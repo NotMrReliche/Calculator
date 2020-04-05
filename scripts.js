@@ -4,21 +4,31 @@
 //user hits equal key//
 //user hits clear key//
 const calculator = document.querySelector(".Calculator");
-console.log (calculator) 
+const display = document.querySelector(".Calculator-Display");
 const keys = calculator.querySelector(".Calculator-Keys");
 keys.addEventListener("click",e => {
     if (e.target.matches("button")){
         const key = e.target;
         const action = key.dataset.action
-        console.log (action)
+        const value = key.textContent
+        const displayNumber = display.textContent
+
+        if (!action){
+            if (displayNumber==="0"){
+                display.textContent = value
+            } else{
+                display.textContent = displayNumber+value
+            }
+        }
         if (action==="add" ||action==="subtract" ||action==="multiply" ||action==="divide"){
-            console.log ("operation key pressed")
+            
+          
         }
         if (action==="decimal"){
-            console.log ("decimal pressed")
+           display.textContent = displayNumber+"."
         }   
         if (action==="clear"){
-            console.log ("clear key")
+            display.textContent = "0"
         }    
         if (action==="equal"){
             console.log ("calculate")
